@@ -15,7 +15,5 @@ All of the functionality found in a standard music player are present in this on
 
 - Fork the repository.
 - Clone the project to your local.
-- Open the project folder with Android Studio.
-- Change gradle settings to match the project's gradle settings.
-- Run a build.
+- Open the project folder with Visual Studio Code or any IDE that you use.
 - And you are good to go!
