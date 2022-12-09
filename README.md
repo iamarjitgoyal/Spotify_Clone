@@ -32,6 +32,7 @@ Run the server
 ```bash
     python3 runserver manage.py
 ``` -->
+You are now ready to complete the necessary tasks after cloning the project!
 
 ## Support
 
