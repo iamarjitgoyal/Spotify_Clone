@@ -1,7 +1,6 @@
-# TextUtils
+# Spotify Clone
 
-A tool for analyzing text data in Django backend.
-It is a simple django project or website in which we can Analyze text.
+The purpose of this project is to create a website that mimics the visual design and some of the fundamental features of Spotify, a well-known music streaming service.
 
 [![GitHub issues](https://img.shields.io/github/issues/arjit1704/textEdits)](https://github.com/arjit1704/Spotify_Clone/issues)
 [![GitHub forks](https://img.shields.io/github/forks/arjit1704/textEdits)](https://github.com/arjit1704/Spotify_Clone/network)
