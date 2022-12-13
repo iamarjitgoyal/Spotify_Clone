@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 body{
-    background-color: antiquewhite;
+    background-color: #262326;
 }
 
 *{
@@ -18,15 +18,15 @@ nav ul{
     align-items: center;
     list-style-type: none;
     height: 65px;
-    background-color: black;
+    background-color: #413e3e;
     color: white;
 }
 
 nav ul li{
-    padding: 0 12px;
+    padding: 0 15px;
 }
 .brand img{
-    width: 44px;
+    width: 49px;
     padding: 0 8px;
 }
 
@@ -34,12 +34,14 @@ nav ul li{
     display: flex;
     align-items: center;
     font-weight: bolder;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
-
+#search{
+    width: 5vw;
+}
 .container{
     min-height: 72vh;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
    font-family: 'Varela Round', sans-serif;
    display: flex;
@@ -53,13 +55,17 @@ nav ul li{
 .bottom{
     position: sticky;
     bottom: 0;
-    height: 130px;
-    background-color: black;
+    height: 105px;
+    background-color: #141313;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; 
+}
+#masterSongName{
+
+text-align: center;
 }
 
 .icons{
@@ -81,7 +87,7 @@ nav ul li{
 .songItem{
     height: 50px;
     display: flex;
-    background-color: white;
+    background-color: rgb(27, 26, 26);
     
     color: black;
     margin: 12px 0;
@@ -89,7 +95,9 @@ nav ul li{
     align-items: center;
     border-radius: 34px;
 }
-
+.songName{
+    color:azure;
+}
 .songItem img{
     width: 43px;
     margin: 0 23px;
@@ -97,6 +105,7 @@ nav ul li{
 }
 
 .timestamp{
+    color: #979a97;
     margin: 0 23px;
 }
 
@@ -107,6 +116,9 @@ nav ul li{
 .songInfo{
     position: absolute;
     left: 10vw;
+    align-items: center;
+    top: 6vh;
+    display: flex;
     font-family: 'Varela Round', sans-serif;
 }
 
@@ -117,6 +129,6 @@ nav ul li{
 
 @media only screen and (max-width: 1100px) {
     body {
-      background-color: red;
+      background-color: #262326;
     }
   }
