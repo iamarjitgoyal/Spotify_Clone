@@ -11,15 +11,17 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
     {songName: "Warriyo - Mortals [NCS Release]", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Cielo - Huma-Huma", filePath: "songs/2.mp3", coverPath: "covers/2.jpg"},
+    {songName: "Zack Merci - Psycho (feat. Nieko) [NCS Release]", filePath: "songs/12.mp3", coverPath: "covers/2.jpg"},
     {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/3.mp3", coverPath: "covers/3.jpg"},
     {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/4.mp3", coverPath: "covers/4.jpg"},
     {songName: "Janji-Heroes-Tonight-feat-Johnning-NCS-Release", filePath: "songs/5.mp3", coverPath: "covers/5.jpg"},
-    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/6.jpg"},
-    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/7.jpg"},
-    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/8.jpg"},
-    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/9.jpg"},
-    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/4.mp3", coverPath: "covers/10.jpg"},
+    {songName: "Fearless", filePath: "songs/2.mp3", coverPath: "covers/6.jpg"},
+    {songName: "Elektronomia", filePath: "songs/7.mp3", coverPath: "covers/7.jpg"},
+    {songName: "Spectre Song Walkerverse Pt. 1", filePath: "songs/8.mp3", coverPath: "covers/8.jpg"},
+    {songName: "Julius Dreisig & Zeus X Crona - Invisible [NCS Release]", filePath: "songs/9.mp3", coverPath: "covers/9.jpg"},
+    {songName: "Cartoon - On & On (feat. Daniel Levi) [NCS Release]", filePath: "songs/10.mp3", coverPath: "covers/10.jpg"},
+    {songName: "Egzod | Maestro Chives | Royalty ft Neoni | NCS Release |", filePath: "songs/11.mp3", coverPath: "covers/11.jpg"}
+
 ]
 
 songItems.forEach((element, i)=>{ 
