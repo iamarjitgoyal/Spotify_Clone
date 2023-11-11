@@ -96,6 +96,52 @@ nav ul li{
     border-radius: 34px;
 }
 
+/* changes */
+
+.header{
+    position: absolute;
+    width:70% ;
+    display: flex;
+    justify-content: space-between;
+}
+.header div i{
+    margin: .4rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.header div i:hover{
+    transform: scale(1.2);
+}
+/* changeing formate */
+/* changes */
+.songItemContainergrid{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.songItemgrid{
+    height: 14rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.songItemgrid img{
+    width: 9rem;
+    margin: 8px ;
+    border-radius: 1rem;
+}
+.songNamegrid{
+    font-size: .9rem;
+    text-align: center;
+}
 .timestamp{
     margin: 0 23px;
 }
