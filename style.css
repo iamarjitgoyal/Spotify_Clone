@@ -11,6 +11,10 @@ body{
 
 nav{
     font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    background-color: black;
 }
 
 nav ul{
@@ -24,6 +28,26 @@ nav ul{
 
 nav ul li{
     padding: 0 12px;
+    transition: all .2s;
+}
+nav ul li:hover{
+    transform: scale(1.2);
+}
+nav div button{
+    font-size: 1rem;
+    margin: .9rem .5rem;
+    padding:0.5rem 1.4rem;
+    border-radius: 1rem;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 251, 251);
+    transition: all .5s;
+    
+}
+nav div button:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(60, 168, 82);
+    transform: scale(1.1);
 }
 .brand img{
     width: 44px;
