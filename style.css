@@ -64,6 +64,9 @@ nav ul li{
 
 .icons{
     margin-top: 14px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .icons i{
     cursor: pointer;
@@ -108,6 +111,14 @@ nav ul li{
     position: absolute;
     left: 10vw;
     font-family: 'Varela Round', sans-serif;
+}
+#loop{
+    margin-left: 70%;
+    color: white;
+}
+#mute{
+    color: white;;
+    margin-left: 80%;
 }
 
 .songInfo img{
