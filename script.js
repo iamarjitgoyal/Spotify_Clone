@@ -7,6 +7,8 @@ let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
 let masterSongName = document.getElementById('masterSongName');
+let isLooping = false;
+let isMuted=false;
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
@@ -20,6 +22,7 @@ let songs = [
     {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/8.jpg"},
     {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/9.jpg"},
     {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/4.mp3", coverPath: "covers/10.jpg"},
+    {songName: "Neffex Best Of ME", filePath: "songs/11.mp3", coverPath: "covers/11.jpg"},
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -48,17 +51,53 @@ audioElement.addEventListener('timeupdate', ()=>{
     // Update Seekbar
     progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
     myProgressBar.value = progress;
+    updateTimestamp();
 })
 
 myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
 })
+//for muting one song
+function mute(){
+    if (!isMuted) {
+        audioElement.muted = true;
+        document.getElementById('mute').classList.remove('volume-off');
+    } else {
+        audioElement.muted = false;
+        document.getElementById('mute').classList.add('volume-high');
+    }
+    isMuted = !isMuted;
+}
+//for the looping one song
+function loop(){
+    if (!isLooping) {
+        audioElement.loop = true;
+        // document.getElementById(gif.)
+        document.getElementById('loop').classList.add('fa-beat');
+    } else {
+        audioElement.loop = false;
+        document.getElementById('loop').classList.remove('fa-beat');
+    }
+    isLooping = !isLooping;
+}
 
 const makeAllPlays = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         element.classList.remove('fa-pause-circle');
         element.classList.add('fa-play-circle');
     })
+}
+//function to format time in minutes and seconds
+function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    let remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+//handle time update event
+function updateTimestamp() {
+    const currentTimestamp = formatTime(audioElement.currentTime);
+    const totalTimestamp = formatTime(audioElement.duration);
+    document.querySelector('.songinfo').innerText = `${currentTimestamp} / ${totalTimestamp}`;
 }
 
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
@@ -76,7 +115,12 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         masterPlay.classList.add('fa-pause-circle');
     })
 })
-
+document.getElementById('loop').addEventListener('click', () => {
+    loop();
+});
+document.getElementById('mute').addEventListener('click', () => {
+    mute();
+ });
 document.getElementById('next').addEventListener('click', ()=>{
     if(songIndex>=9){
         songIndex = 0
@@ -84,6 +128,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
+    makeAllPlays();
     audioElement.src = `songs/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
@@ -92,6 +137,11 @@ document.getElementById('next').addEventListener('click', ()=>{
     masterPlay.classList.add('fa-pause-circle');
 
 })
+document.addEventListener('keydown',(Event)=>{
+    if(Event.code==="KeyM"){
+        mute();
+    }
+});
 
 document.getElementById('previous').addEventListener('click', ()=>{
     if(songIndex<=0){
@@ -100,6 +150,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
+    makeAllPlays();
     audioElement.src = `songs/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
