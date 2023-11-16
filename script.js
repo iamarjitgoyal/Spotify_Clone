@@ -138,13 +138,24 @@ document.getElementById('loop').addEventListener('click', () => {
 });
 masterPlay.addEventListener('click',()=>{
     play();
-})
+}) 
+// listning to keyboard
 document.addEventListener('keydown',(Event)=>{
     if(Event.code==="Space"){
         play();
     }
     if(Event.code==="KeyM"){
         mute();
+    }
+    if(Event.code==="ArrowUp"){
+        if (audioElement.volume < 1.0) {
+            audioElement.volume += 0.1; // You can adjust the increment as needed
+        }
+    }
+    if(Event.code==="ArrowDown"){
+        if (audioElement.volume > 0.0) {
+            audioElement.volume -= 0.1; // You can adjust the decrement as needed
+        }
     }
 });
 audioElement.addEventListener('timeupdate', ()=>{ 
