@@ -20,6 +20,7 @@ let songs = [
     {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/8.jpg"},
     {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "covers/9.jpg"},
     {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/4.mp3", coverPath: "covers/10.jpg"},
+    {songName: "Royalty(Don Diable Remix)", filePath: "songs/Egzod & Maestro Chives - Royalty (Don Diablo Remix) [NCS Release].mp3", coverPath: "covers/11.jpg"},
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -78,7 +79,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 })
 
 document.getElementById('next').addEventListener('click', ()=>{
-    if(songIndex>=9){
+    if(songIndex>=10){
         songIndex = 0
     }
     else{
