@@ -26,7 +26,7 @@ songItems.forEach((element, i)=>{
     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 })
- 
+
 
 // Handle play/pause click
 masterPlay.addEventListener('click', ()=>{
@@ -90,7 +90,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
-
+    
 })
 
 document.getElementById('previous').addEventListener('click', ()=>{
